@@ -1,0 +1,28 @@
+.nav-div {
+  height: 36px;
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 36px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.collapsible-body .nav-div {
+	height: 36px;
+  padding-left: 47px;
+  line-height: 36px;
+  background-color: rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.collapsible-body .nav-div:hover {
+	background-color: rgba(240, 240, 240, 0.15);
+}
+
+.nav-link {
+	cursor: pointer;
+}
+
+.nav-link:hover {
+	background-color: rgba(240, 240, 240, 0.15);
+}

@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './bootstrap.min.css';
+import './mdb.min.css';
+import Home from './hooks/Home';
+import Navbar from './hooks/Navbar';
 
-function App() {
+function App() {   
+  const [page, setPage] = useState(<Home />);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="fixed-sn mdb-skin">       
+        <Navbar setPage={setPage} />  
+        <main>
+          {page}
+        </main>      
     </div>
   );
 }
