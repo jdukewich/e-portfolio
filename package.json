@@ -2,7 +2,7 @@
   "name": "e-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jdukewich.github.io/e-portfolio/",
+  "homepage": "https://dukewich.com",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
