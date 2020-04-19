@@ -1,31 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../bootstrap.min.css';
 import '../mdb.min.css';
 
 function Home() { 
-  const [count, setCount] = useState(0);
-
   return (     
     <div className="container">   
       <div className="row">
         <div className="col">
           <div className="card text-center">
             <div className="card-body">
-              <div className="row">
-                <div className="col">
-                  Count is {count}
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <button className="btn btn-outline-primary btn-rounded waves-effect" onClick={() => setCount(count + 1)}>
-                    Increase count
-                  </button>
-                  <button className="btn btn-outline-primary btn-rounded waves-effect" onClick={() => setCount(0)}>
-                    Reset count
-                  </button>
-                </div>
-              </div>
+              <div className="card-title"><h2>Home</h2></div>
+              <div className="card-text">Welcome to my personal website! My name is John Dukewich, and 
+              I am a young professional in the field of software engineering and computer science.</div>
             </div>
           </div>
         </div>

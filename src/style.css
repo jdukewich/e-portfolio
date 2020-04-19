@@ -26,3 +26,29 @@
 .nav-link:hover {
 	background-color: rgba(240, 240, 240, 0.15);
 }
+
+.navbar {
+  z-index: 1040;
+}
+.side-nav {
+  margin-top: 57px !important;
+}
+
+@media (min-width: 1200px){
+.fixed-sn main {
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+}
+
+.fixed-sn .double-nav, .fixed-sn main, .fixed-sn footer {
+    padding-left: 0;
+}
+
+.mdb-skin .side-nav .collapsible li .no-collapse.active {
+    background-color: rgba(0,0,0,0.0);
+}
+
+.full-page {
+  height: 85vh;
+}
