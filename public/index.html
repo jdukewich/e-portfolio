@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <title>React App</title>
+    <title>John Dukewich E-Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -25,7 +25,9 @@
     <script type="text/javascript">
       $(document).ready(function() {                
         // SideNav Button Initialization
-        $(".button-collapse").sideNav();
+        $(".button-collapse").sideNav({
+          breakpoint: 1200
+        });        
         // SideNav Scrollbar Initialization
         var sideNavScrollbar = document.querySelector('.custom-scrollbar');
         var ps = new PerfectScrollbar(sideNavScrollbar);

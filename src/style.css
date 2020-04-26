@@ -52,3 +52,20 @@
 .full-page {
   height: 85vh;
 }
+
+body {
+  background-color: rgba(51, 102, 153, 0.5);
+}
+
+.side-nav {
+  margin-top: 0 !important;
+}
+
+.custom-scrollbar {
+  margin-top: 57px;
+}
+
+.link-page {
+  cursor: pointer;
+  color: #007bff;
+}

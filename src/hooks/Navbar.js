@@ -6,6 +6,12 @@ import Home from './Home';
 import About from './About';
 import Resume from './Resume';
 import Coursework from './Coursework';
+import Reflection from './Reflection';
+import ExecutiveSummary from './ExecutiveSummary';
+import InstructionSet from './InstructionSet';
+import TechDescription from './TechDescription';
+import SudokuSolver from './SudokuSolver';
+import Contact from './Contact';
 
 function Navbar(props) {  
   return (      
@@ -13,8 +19,8 @@ function Navbar(props) {
       <div id="slide-out" className="side-nav fixed">
         <ul className="custom-scrollbar">              
           <li>
-            <div className="logo-wrapper waves-light">                       
-              <img src="https://www.psu.edu/profiles/psu_profile/themes/psu_main/logonew.png" alt="Penn State University" className="img-fluid flex-center" />          
+            <div className="text-center mt-3 mx-2">
+              <span>Find me on LinkedIn and Github</span>
             </div>
           </li>
           <li>
@@ -32,29 +38,25 @@ function Navbar(props) {
             </ul>
           </li>
           <li>
-            <form class="search-form" role="search">
-              <div class="form-group md-form mt-0 pt-1 waves-light">
-                <input type="text" class="form-control" placeholder="Search" />
-              </div>
-            </form>
-          </li>
-          <li>
             <ul className="collapsible collapsible-accordion">
-              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Home />)}><i class="fas fa-home"></i>Home</div></li>
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Home />)}>
+                <i class="fas fa-home"></i>Home</div>
+              </li>
               <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<About/>)}><i class="fas fa-user"></i>About Me</div></li>
-              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Resume />)}><i class="far fa-file"></i>Résumé</div></li>              
-              <li><div className="collapsible-header waves-effect nav-div no-collapse"><i class="far fa-building"></i>Work Experience</div></li>
-              <li><div className="collapsible-header waves-effect arrow-r nav-div" onClick={() => props.setPage(<Coursework />)}><i className="fas fa-chevron-right"></i>Coursework<i
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Resume />)}><i class="far fa-file"></i>Résumé</div></li>                            
+              <li><div className="collapsible-header waves-effect arrow-r nav-div" onClick={() => props.setPage(<Coursework setPage={props.setPage} />)}><i className="fas fa-chevron-right"></i>Coursework<i
                     className="fas fa-angle-down rotate-icon"></i></div>
                 <div className="collapsible-body">
-                  <ul className="list-unstyled">                                                            
-                    <li><div className="waves-effect nav-div">Technical Description</div></li>
-                    <li><div className="waves-effect nav-div">Instruction Set</div></li>
-                    <li><div className="waves-effect nav-div">Sudoku Solver</div></li>                    
+                  <ul className="list-unstyled">  
+                    <li><div className="waves-effect nav-div" onClick={() => props.setPage(<ExecutiveSummary />)}>Executive Summary</div></li>                                                          
+                    <li><div className="waves-effect nav-div" onClick={() => props.setPage(<TechDescription />)}>Technical Description</div></li>
+                    <li><div className="waves-effect nav-div" onClick={() => props.setPage(<InstructionSet />)}>Instruction Set</div></li>
+                    <li><div className="waves-effect nav-div" onClick={() => props.setPage(<SudokuSolver />)}>Sudoku Solver</div></li>                    
                   </ul>
                 </div>
               </li> 
-              <li><div className="collapsible-header waves-effect nav-div no-collapse"><i class="fas fa-envelope"></i>Contact Me</div></li>          
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Reflection />)}><i class="fas fa-book-reader"></i>Reflection</div></li> 
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Contact />)}><i class="fas fa-envelope"></i>Contact Me</div></li>          
             </ul>
           </li>
         </ul>
@@ -68,8 +70,13 @@ function Navbar(props) {
           <p>John Dukewich E-Portfolio</p>
         </div>
         <ul className="nav navbar-nav nav-flex-icons ml-auto">
-          <li className="nav-item">
-            <div className="nav-link"><i className="fas fa-envelope"></i> <span className="clearfix d-none d-sm-inline-block">Contact</span></div>
+          <li class="nav-item dropdown">
+            <div class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"><i class="fas fa-universal-access"></i>Accessibility</div>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <div class="dropdown-item">High Contrast Mode</div>
+              <div class="dropdown-item">Font Size</div>              
+            </div>
           </li>
         </ul>
       </nav>
