@@ -14,13 +14,18 @@ import SudokuSolver from './SudokuSolver';
 import Contact from './Contact';
 
 function Navbar(props) {  
+  let navSize = '1rem';
+  if (props.font) {
+    navSize = '1.75rem';
+  }
+
   return (      
     <header>          
       <div id="slide-out" className="side-nav fixed">
-        <ul className="custom-scrollbar">              
+        <ul className={props.contrast ? "custom-scrollbar contrast-skin ps" : "custom-scrollbar ps"}>              
           <li>
-            <div className="text-center mt-3 mx-2">
-              <span>Find me on LinkedIn and Github</span>
+            <div className="text-center mt-4 mx-2">
+              <span style={{ fontSize: navSize }}>Find me on LinkedIn and Github</span>
             </div>
           </li>
           <li>
@@ -38,12 +43,12 @@ function Navbar(props) {
             </ul>
           </li>
           <li>
-            <ul className="collapsible collapsible-accordion">
+            <ul className="collapsible collapsible-accordion" style={{ fontSize: navSize }}>
               <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Home />)}>
-                <i class="fas fa-home"></i>Home</div>
+                <i className="fas fa-home"></i>Home</div>
               </li>
-              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<About/>)}><i class="fas fa-user"></i>About Me</div></li>
-              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Resume />)}><i class="far fa-file"></i>Résumé</div></li>                            
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<About/>)}><i className="fas fa-user"></i>About Me</div></li>
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Resume />)}><i className="far fa-file"></i>Résumé</div></li>                            
               <li><div className="collapsible-header waves-effect arrow-r nav-div" onClick={() => props.setPage(<Coursework setPage={props.setPage} />)}><i className="fas fa-chevron-right"></i>Coursework<i
                     className="fas fa-angle-down rotate-icon"></i></div>
                 <div className="collapsible-body">
@@ -55,30 +60,30 @@ function Navbar(props) {
                   </ul>
                 </div>
               </li> 
-              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Reflection />)}><i class="fas fa-book-reader"></i>Reflection</div></li> 
-              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Contact />)}><i class="fas fa-envelope"></i>Contact Me</div></li>          
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Reflection />)}><i className="fas fa-book-reader"></i>Reflection</div></li> 
+              <li><div className="collapsible-header waves-effect nav-div no-collapse" onClick={() => props.setPage(<Contact />)}><i className="fas fa-envelope"></i>Contact Me</div></li>          
             </ul>
           </li>
         </ul>
-        <div className="sidenav-bg mask-strong"></div>
+        <div className={props.contrast ? "sidenav-bg mask-strong contrast-skin" : "sidenav-bg mask-strong"}></div>
       </div>
-      <nav className="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">            
+      <nav className={props.contrast ? "navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav contrast-skin" : "navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav"}>               
         <div className="float-left">
           <div data-activates="slide-out" className="button-collapse white-text nav-div"><i className="fas fa-bars"></i></div>          
         </div>            
         <div className="breadcrumb-dn mr-auto">
-          <p>John Dukewich E-Portfolio</p>
+          <p style={{ fontSize: navSize }}>John Dukewich E-Portfolio</p>
         </div>
         <ul className="nav navbar-nav nav-flex-icons ml-auto">
-          <li class="nav-item dropdown">
-            <div class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"><i class="fas fa-universal-access"></i>Accessibility</div>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <div class="dropdown-item">High Contrast Mode</div>
-              <div class="dropdown-item">Font Size</div>              
+          <li className="nav-item dropdown">
+            <div className="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style={{ fontSize: navSize}}><i className="fas fa-universal-access"></i>Accessibility</div>
+            <div className="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <div className="dropdown-item waves-effect" style={{ fontSize: navSize}} onClick={() => props.toggleContrast(!props.contrast)}>High Contrast Mode</div>
+              <div className="dropdown-item waves-effect" style={{ fontSize: navSize}} onClick={() => props.toggleFont(!props.font)}>Font Size</div>              
             </div>
           </li>
-        </ul>
+        </ul>        
       </nav>
     </header>   
   );

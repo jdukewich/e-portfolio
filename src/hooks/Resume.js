@@ -7,14 +7,14 @@ function Resume() {
     <div className="container-fluid">   
       <div className="row">
         <div className="col">          
-          <div className="card">            
+          <div className="card mb-4">            
             <div className="card-body">   
-              <div className="card-title text-center"><h2>Résumé</h2></div>
+              <div className="card-title text-center"><div className="h2-responsive">Résumé</div></div>
                 <div className="h5-responsive mb-2">
                 My résumé contains a brief summary of some of my past work experiences as well as my technical skills. I have plenty of other projects and experiences, so check out other sections of my portfolio as well! If you have any questions about my experiences, I would be happy to answer them!              
                 </div>          
                 <div className="embed-responsive embed-responsive-16by9">
-                  <embed className="embed-responsive-item" src="/resume.pdf" />
+                  <embed className="embed-responsive-item" src="/resume.pdf" />                  
                 </div>
             </div>
           </div>

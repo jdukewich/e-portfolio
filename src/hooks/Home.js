@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style.css';
 import '../bootstrap.min.css';
 import '../mdb.min.css';
 
@@ -7,9 +8,9 @@ function Home() {
     <div className="container">   
       <div className="row">
         <div className="col">
-          <div className="card">
+          <div className="card mb-4">
             <div className="card-body">
-              <div className="card-title"><h2>Welcome!</h2></div>
+              <div className="card-title"><div className="h2-responsive">Welcome!</div></div>
               <div className="h5-responsive mb-4">Welcome to my personal website! My name is John Dukewich, and 
               I am a young professional in the field of software engineering and computer science.</div>
 
@@ -20,8 +21,10 @@ function Home() {
               <div className="h5-responsive mb-4">This site was designed to follow Google's <a target="_blank" href="https://material.io/" rel="noopener noreferrer">Material Design</a> principles by utilizing
               the <a target="_blank" href="https://mdbootstrap.com/" rel="noopener noreferrer">Material Design Bootstrap</a> library.</div>
 
-              <div className="col text-center">
-                <img src="headshot.jpg" alt="A headshot of John Dukewich" />
+              <div className="row justify-content-center">
+                <div className="col-lg-6 col-md-8 col-12">
+                  <img className="w-100" src="headshot.jpg" alt="A headshot of John Dukewich" />
+                </div>
               </div>              
             </div>
           </div>

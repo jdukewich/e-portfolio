@@ -7,9 +7,9 @@ function About() {
     <div className="container">   
       <div className="row">
         <div className="col">
-          <div className="card">
+          <div className="card mb-4">
             <div className="card-body">
-              <div className="card-title"><h2>About Me</h2></div>
+              <div className="card-title"><div className="h2-responsive">About Me</div></div>
               <div className="h5-responsive mb-4">I currently attend Penn State University pursuing a Bachelor of Science in Computer Science. 
               My passion for computer science is evident in my coursework, professional experience, and extracurricular activities. Specifically, I
               am extremely interested in web development as well as artificial intelligence.</div>
@@ -24,9 +24,12 @@ function About() {
               <div className="h5-responsive mb-4">Some of my hobbies include running, skiing, and playing sports (soccer, tennis, and volleyball mostly). I also enjoy programming side projects,
               such as personal websites.
               </div>
-              <div className="col text-center">
-                <img src="thon.jpg" alt="John Dukewich with two friends at THON 2020" />
-              </div>  
+
+              <div className="row justify-content-center">
+                <div className="col-lg-6 col-md-8 col-12">
+                  <img className="w-100" src="thon.jpg" alt="John Dukewich with two friends at THON 2020" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

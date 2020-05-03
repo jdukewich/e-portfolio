@@ -7,13 +7,13 @@ function ExecutiveSummary() {
     <div className="container-fluid">   
       <div className="row">
         <div className="col">          
-          <div className="card">            
+          <div className="card mb-4">            
             <div className="card-body">   
-              <div className="card-title text-center"><h2>Executive Summary</h2></div>
+              <div className="card-title text-center"><div className="h2-responsive">Executive Summary</div></div>
                 <div className="h5-responsive mb-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet mi quis tempus mattis. Aenean tempor magna massa, 
-                id consectetur tortor pharetra vel. Aliquam sed malesuada elit. Sed posuere mauris ac eros imperdiet pharetra. Duis 
-                eleifend elit fermentum orci semper porta. Pellentesque at risus enim. Morbi convallis sed mi sit amet sagittis.              
+                This executive summary contains four abstracts of research papers about a machine learning model known as BERT. BERT
+                is a transformer model that attempts to learn word embeddings, mapping similarities between words mathematically. 
+                After reading four papers about the uses of BERT, I summarized the overall ideas of BERT into a single executive summary.             
                 </div>         
                 <div className="embed-responsive embed-responsive-16by9">
                   <embed className="embed-responsive-item" src="/ExecutiveSummary.pdf" />

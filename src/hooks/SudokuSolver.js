@@ -7,13 +7,14 @@ function SudokuSolver() {
     <div className="container-fluid">   
       <div className="row">
         <div className="col">          
-          <div className="card">            
+          <div className="card mb-4">            
             <div className="card-body">   
-              <div className="card-title text-center"><h2>Sudoku as Constraint Satisfaction</h2></div>
+              <div className="card-title text-center"><div className="h2-responsive">Sudoku as Constraint Satisfaction</div></div>
                 <div className="h5-responsive mb-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet mi quis tempus mattis. Aenean tempor magna massa, 
-                id consectetur tortor pharetra vel. Aliquam sed malesuada elit. Sed posuere mauris ac eros imperdiet pharetra. Duis 
-                eleifend elit fermentum orci semper porta. Pellentesque at risus enim. Morbi convallis sed mi sit amet sagittis.              
+                In artificial intelligence, constraint satisfaction is a popular methodology for solving certain problems. This project
+                research into the practical effects of constraint satisfaction algorithms and how efficient they are relating to the classic
+                Sudoku puzzle. The experimentation and findings are meant to generalize to Sudoku puzzles of arbitrary size, instead of the usual
+                9 by 9 grid.             
                 </div>   
                 <div className="embed-responsive embed-responsive-16by9">
                   <embed className="embed-responsive-item" src="/DS_497_Final_Project.pdf" />
