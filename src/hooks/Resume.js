@@ -16,7 +16,7 @@ function Resume() {
                 <div className="embed-responsive embed-responsive-16by9">
                 	<object className="embed-responsive-item" data="resume.pdf">                		
    					 				<p><a href="resume.pdf">Download PDF</a></p>
-                	</object>                               
+                	</object>          	                        
                 </div>
             </div>
           </div>
